@@ -1,0 +1,6 @@
+---
+Language: Proto
+BasedOnStyle: Google
+TabWidth: 4
+UseTab: Always
+IndentWidth: 4

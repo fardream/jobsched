@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package jobsched;
+
+option go_package = "github.com/fardream/jobsched";
+
+service JobSched {
+	rpc ExecutorRun(stream ExecutorRunRequest)
+		returns (stream ExecutorRunResponse) {}
+	rpc AddJob(AddJobRequest) returns (AddJobResponse) {}
+}
+
+message ExecutorRunRequest {
+	string id = 1;
+	string resources = 2;
+}
+
+message ExecutorRunResponse {}
+
+message AddJobRequest {}
+
+message AddJobResponse {}
